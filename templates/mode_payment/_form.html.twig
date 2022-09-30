@@ -1,0 +1,16 @@
+{{ form_start(form) }}
+    {{form_label(form.libelle,'Libellé du mode de payment')}}
+    {{ form_widget(form.libelle,{
+        'attr':{
+            'class':'form-control mb-2'
+        }
+    }) }}
+
+    {{form_label(form.description,'Description')}}
+    {{ form_widget(form.description,{
+        'attr':{
+            'class':'form-control mb-2'
+        }
+    }) }}
+    <button class="btn bttn-success mb-2">{{ button_label|default('Save') }}</button>
+{{ form_end(form) }}

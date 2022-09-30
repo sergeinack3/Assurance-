@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Membre{% endblock %}
+
+{% block body %}
+    <h1 class="mt-7"> Créer un nouveau mutualiste </h1>
+
+    {{ include('membre/_form.html.twig') }}
+
+    <a href="{{ path('membre_index') }}" class="btn btn-danger"> << retour à la liste</a>
+{% endblock %}

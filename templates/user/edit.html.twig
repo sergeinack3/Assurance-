@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit User{% endblock %}
+
+{% block body %}
+
+<div class="card">
+    <div class="card-body">
+
+    {{ include('user/_form.html.twig', {'button_label': 'Update'}) }}
+
+    
+        <a href="{{ path('user_index') }}" class="btn btn-danger"> << retour en arrière </a>
+    
+    </div>
+</div>
+
+{% endblock %}

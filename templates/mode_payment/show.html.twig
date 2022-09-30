@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ModePayment{% endblock %}
+
+{% block body %}
+    <h1>ModePayment</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ mode_payment.id }}</td>
+            </tr>
+            <tr>
+                <th>Libelle</th>
+                <td>{{ mode_payment.libelle }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ mode_payment.description }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('mode_payment_index') }}">back to list</a>
+
+    <a href="{{ path('mode_payment_edit', {'id': mode_payment.id}) }}">edit</a>
+
+    {{ include('mode_payment/_delete_form.html.twig') }}
+{% endblock %}

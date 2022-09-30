@@ -1,0 +1,128 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}User{% endblock %}
+
+{% block body %}
+    <h1>User</h1>
+
+    {# <table class="table">
+        <tbody>
+            <tr>
+                <th class="ml-4">Id</th>
+                <td>{{ user.id }}</td>
+            </tr>
+            <tr>
+                <th class="ml-4">Firstname</th>
+                <td>{{ user.firstname }}</td>
+            </tr>
+            <tr>
+                <th class="ml-4">Lastname</th>
+                <td>{{ user.lastname }}</td>
+            </tr>
+            <tr>
+                <th class="ml-4">Pseudo</th>
+                <td>{{ user.Pseudo }}</td>
+            </tr>
+            <tr>
+                <th class="ml-4">Email</th>
+                <td>{{ user.email }}</td>
+            </tr>
+            <tr>
+                <th class="ml-4">Password</th>
+                <td>{{ user.password }}</td>
+            </tr>
+            <tr>
+                <th class="ml-4">State</th>
+                <td>{{ user.state }}</td>
+            </tr>
+            <tr>
+                <th class="ml-4">Motif</th>
+                <td>{{ user.motif }}</td>
+            </tr>
+            <tr>
+                <th class="ml-4">CreatedAt</th>
+                <td>{{ user.createdAt ? user.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th class="ml-4">UpdatedAt</th>
+                <td>{{ user.updatedAt ? user.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+        </tbody>
+    </table> #}
+
+
+    <div class="col-md-10 ml-auto mr-auto">
+          <div class="card card-upgrade">
+            <div class="card-header text-center border-bottom-0">
+              <h4 class="card-title">Informations utilisateurs</h4>
+              <p class="card-category">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique ipsum consequuntur alias odit libero sit,
+                 est perspiciatis natus totam quibusdam possimus excepturi aliquid ratione. Est, harum? Sunt rem esse minus!</p>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive table-upgrade">
+                <table class="table">
+                  <thead>
+                    <tr>
+                        <th class="ml-4"></th>
+                        <th class="ml-4"> Propriétés </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                        <th class="ml-4">Id</th>
+                        <td>{{ user.id }}</td>
+                    </tr>
+                    <tr>
+                        <th class="ml-4">Firstname</th>
+                        <td>{{ user.firstname }}</td>
+                    </tr>
+                    <tr>
+                        <th class="ml-4">Lastname</th>
+                        <td>{{ user.lastname }}</td>
+                    </tr>
+                    <tr>
+                        <th class="ml-4">Pseudo</th>
+                        <td>{{ user.pseudo }}</td>
+                    </tr>
+                    <tr>
+                        <th class="ml-4">Email</th>
+                        <td>{{ user.Email }}</td>
+                    </tr>
+                    <tr>
+                        <th class="ml-4">State</th>
+                        <td>{{ user.state }}</td>
+                    </tr>
+                    <tr>
+                        <th class="ml-4">Motif</th>
+                        <td>{{ user.motif }}</td>
+                    </tr>
+                    <tr>
+                        <th class="ml-4">CreatedAt</th>
+                        <td>{{ user.createdAt ? user.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+                    </tr>
+                    <tr>
+                        <th class="ml-4">UpdatedAt</th>
+                        <td>{{ user.updatedAt ? user.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <a href="{{ path('user_index') }}" class="btn btn-round btn-danger">Retour en arrière</a>
+                        <a href="{{ path('user_edit', {'id': user.id}) }}" class="btn btn-round btn-primary">éditer</a>
+                      </td>
+                      <td>
+                        {{ include('user/_delete_form.html.twig') }}
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    {# <a href="{{ path('user_index') }}">back to list</a>
+
+    <a href="{{ path('user_edit', {'id': user.id}) }}">edit</a>
+
+    {{ include('user/_delete_form.html.twig') }} #}
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New ModePayment{% endblock %}
+
+{% block body %}
+<div class="card">
+    <div class="card-body">
+        {{ include('mode_payment/_form.html.twig') }}
+        <a href="{{ path('mode_payment_index') }}" class="btn btn-danger">  << retour en arrière </a>
+    </div>
+</div>
+{% endblock %}

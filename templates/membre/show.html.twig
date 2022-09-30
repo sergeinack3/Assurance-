@@ -1,0 +1,179 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Membre{% endblock %}
+
+{% block body %}
+    
+
+        <div class="col-md-10 ml-auto mr-auto">
+          <div class="card card-upgrade">
+            <div class="card-header text-center border-bottom-0">
+              <h4 class="card-title">Informations utilisateurs</h4>
+              <p class="card-category">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique ipsum consequuntur alias odit libero sit,
+                 est perspiciatis natus totam quibusdam possimus excepturi aliquid ratione. Est, harum? Sunt rem esse minus!</p>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive table-upgrade">
+                <table class="table">
+                  <thead>
+                    <tr>
+                        <th class="ml-6"></th>
+                        <th class="ml-6"> Propriétés </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                        <th class="ml-6">Id</th>
+                        <td>{{ membre.id }}</td>
+                    </tr>
+                    <tr>
+                        <th class="ml-6">Firstname</th>
+                        <td>{{ membre.firstname }}</td>
+                    </tr>
+                    <tr>
+                        <th class="ml-6">Lastname</th>
+                        <td>{{ membre.lastname }}</td>
+                    </tr>
+                    <tr>
+                        <th class="ml-6">Sex</th>
+                        <td>{{ membre.sex }}</td>
+                    </tr>
+                    <tr>
+                        <th class="ml-6">Grade</th>
+                        <td>{{ membre.grade }}</td>
+                    </tr>
+                    <tr>
+                        <th class="ml-6">Email</th>
+                        <td>{{ membre.Email }}</td>
+                    </tr>
+                    <tr>
+                        <th class="ml-6">Cotisation</th>
+                        <td>{{ membre.cotisation }}</td>
+                    </tr>
+                    <tr>
+                        <th class="ml-6">Adresse</th>
+                        <td>{{ membre.adresse }}</td>
+                    </tr>
+                    <tr>
+                        <th class="ml-6">Workplace</th>
+                        <td>{{ membre.workPlace }}</td>
+                    </tr>
+                    <tr>
+                        <th class="ml-6">Date_birth</th>
+                        <td>{{ membre.dateBirth ? membre.dateBirth|date('Y-m-d') : '' }}</td>
+                    </tr>
+                    <tr>
+                        <th class="ml-6">Phone_number</th>
+                        <td>{{ membre.phoneNumber }}</td>
+                    </tr>
+                    <tr>
+                        <th class="ml-6">Id_cart</th>
+                        <td>{{ membre.idCart }}</td>
+                    </tr>
+                    <tr>
+                        <th>State member</th>
+                        <td>{{ membre.sateMember }}</td>
+                    </tr>
+                    <tr>
+                        <th class="ml-6">CreatedAt</th>
+                        <td>{{ membre.createdAt ? membre.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+                    </tr>
+                    
+                    <tr>
+                      <td>
+                        <a href="{{ path('membre_index') }}" class="btn btn-round btn-danger">Retour en arrière</a>
+                        <a href="{{ path('membre_edit', {'id': membre.id}) }}" class="btn btn-round btn-primary">éditer</a>
+                      </td>
+                      <td>
+                        {{ include('membre/_delete_form.html.twig') }}
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+    {# <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ membre.id }}</td>
+            </tr>
+            <tr>
+                <th>Firstname</th>
+                <td>{{ membre.firstname }}</td>
+            </tr>
+            <tr>
+                <th>Lastname</th>
+                <td>{{ membre.lastname }}</td>
+            </tr>
+            <tr>
+                <th>Sex</th>
+                <td>{{ membre.sex }}</td>
+            </tr>
+            <tr>
+                <th>Grade</th>
+                <td>{{ membre.grade }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ membre.email }}</td>
+            </tr>
+            <tr>
+                <th>Cotisation</th>
+                <td>{{ membre.cotisation }}</td>
+            </tr>
+            <tr>
+                <th>Adresse</th>
+                <td>{{ membre.adresse }}</td>
+            </tr>
+            <tr>
+                <th>Work_place</th>
+                <td>{{ membre.workPlace }}</td>
+            </tr>
+            <tr>
+                <th>Date_birth</th>
+                <td>{{ membre.dateBirth ? membre.dateBirth|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Phone_number</th>
+                <td>{{ membre.phoneNumber }}</td>
+            </tr>
+            <tr>
+                <th>Id_cart</th>
+                <td>{{ membre.idCart }}</td>
+            </tr>
+            <tr>
+                <th>Hiring_date</th>
+                <td>{{ membre.hiringDate ? membre.hiringDate|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Sate_member</th>
+                <td>{{ membre.sateMember }}</td>
+            </tr>
+            <tr>
+                <th>Motif</th>
+                <td>{{ membre.motif }}</td>
+            </tr>
+            <tr>
+                <th>CreatedAt</th>
+                <td>{{ membre.createdAt ? membre.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>UpdatedAt</th>
+                <td>{{ membre.updatedAt ? membre.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+        </tbody>
+    </table> #}
+
+    {# <a href="{{ path('membre_index') }}">back to list</a>
+
+    <a href="{{ path('membre_edit', {'id': membre.id}) }}">edit</a>
+
+    {{ include('membre/_delete_form.html.twig') }} #}
+{% endblock %}
